@@ -1,0 +1,82 @@
+body{
+	background-color: #eeeeee;
+	text-align: center;
+	font-size: 20px;
+	font-family: Lato;
+}
+.majorhead{
+	margin-top:30px;
+	font-family: 'Dancing Script';
+	font-size: 100px;
+	text-align: left;
+	text-decoration: none;
+}
+
+.links{
+	font-family: 'Josefin Sans';
+	text-align: left;
+	text-decoration: none;
+
+}
+
+.titles{
+	text-align: left;
+	font-family: 'Josefin Sans';
+	font-size: 35px
+}
+
+.bodies{
+	text-align: left;
+	font-family: 'Josefin Sans';
+	font-size: 20px
+}
+.bodies2{
+	text-align: left;
+	font-family: 'Josefin Sans';
+	font-size: 15px
+}
+.sections{
+	margin-top: 250px;
+}
+
+.tick line{
+	stroke-dasharray: 3 3;
+	opacity: 0.2;
+}
+
+.y text{
+	transform: translate(-5px,0px);
+	font-size: 12px;
+	font-family: 'Josefin Sans';
+}
+
+.x text{
+	transform: translate(-5px,15px) rotate(-45deg);
+	font-size: 15px;
+	font-family: 'Josefin Sans';
+}
+
+.axislabel{
+	font-family: 'Josefin Sans';
+}
+.legend_text{
+	font-size: 13px;
+	font-family: 'Josefin Sans';
+}
+
+div.ttip {
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  height: 28px;
+  padding: 2px;
+  font: 12px 'Josefin Sans';
+  background: #333;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.election{
+	stroke-dasharray: 3 3;
+}
