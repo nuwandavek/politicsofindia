@@ -4,15 +4,37 @@
 		<title>politicsofindia</title>
 		
 		<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="https://d3js.org/topojson.v2.min.js"></script>
+		<script src="https://d3js.org/d3-geo.v1.min.js"></script>
+		<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script type="text/javascript" src="jsmain.js"></script>
 		<script type="text/javascript" src="res/data.js"></script>
+		<script type="text/javascript" src="res/graph-scroll.js"></script>
 		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Josefin+Sans|Lato" rel="stylesheet">
+		<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="cssmain.css">
 		
 		
+
+		<!--script type="text/javascript" src="res/d3.v4.min.js"></script>
+		<script src="res/topojson.v2.min.js"></script>
+		<script src="res/d3-geo.v1.min.js"></script>
+		<script src="res/d3-geo-projection.v2.min.js"></script>
+		<script type="text/javascript" src="res/jquery.min.js"></script>
+		<script type="text/javascript" src="jsmain.js"></script>
+		<script type="text/javascript" src="res/data.js"></script>
+		<script type="text/javascript" src="res/graph-scroll.js"></script>
+		<script type="text/javascript" src="res/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="res/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Josefin+Sans:400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="cssmain.css">
+		<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script-->
+
+
+
 
 	</head>
 	<body>
@@ -36,7 +58,51 @@
 				
 		</div>
 		<div>
-			<div class="sections">
+
+
+			<div class="row">
+				<p class="titles" style="margin-top: 100px;">2. MPs [2014 Lok Sabha]</p>
+				<p class="bodies2">I realized I had begun the story, without context. So, for the super-beings observing this simulation, here goes. I'll be working with the dataset of MPs of the current Lok Sabha for the next few weeks, trying to answer questions that interest me.</p>
+				<p class="titles2">An Overview</p>
+			</div>
+			<div id="container" class="row">
+				<div id="map"></div>
+			
+				<div id="overlay">
+					<div class="trigger" id="tr-intro">
+						<p class="bodies3">HELLO</p>
+						This is India, my homeland. It is divided into 543 constituencies (as of 2017 Sep.) and each unit sends a representative to the Lok Sabha, to ensure its interests are being served while laws and policies are being framed. 
+					</div>
+					<div class="trigger" id="tr-reservation">
+						<p class="bodies3">RESERVATION</p>
+						The constitution of India reserves some constituencies for SCs(15.4% of Constituencies) and STs(8.6% of Constituencies). This was done to empower the disenfranchized, and further democratize the agency of governance.
+					</div>
+					<div class="trigger" id="tr-parties">
+						<p class="bodies3">PARTIES - LS MPS</p>
+						In the 2014 Lok Sabha elections, Bharatiya Janata Party (BJP) won a staggering 51.93% of seats, followed by Indian National Congress (INC) at a distant 8.1% seats. The BJP, along with its allies in the National Democratic Alliance (NDA), formed the central government of India. <br> Southern and Eastern India seem to resist the sway of the BJP, at least in this election.
+					</div>
+					<div class="trigger" id="tr-gender">
+						<p class="bodies3">GENDER - LS MPS</p>
+					For a nation with over 500 million women, a dismal 11.4% of seats were won by them. 
+					</div>
+					<div class="trigger" id="tr-education">
+						<p class="bodies3">EDUCATION - LS MPS</p>
+						74.77% of the winners have studied well beyond 12th Standard with 33.7% post-graduates and doctorates. There are 69% women winners over 12STD+ compared to 75.5%, among men winners. 
+						
+					</div>
+					<div class="trigger" id="tr-crimes">
+						<p class="bodies3">CRIMINAL CASES - LS MPS</p>
+						34.3% of winners have criminal cases against them with 3% having >=10 criminal cases against them. 64% male winners have zero criminal cases against them whereas the number of female winners without criminal cases stands at 74%
+
+					</div>
+					<div class="trigger" id="tr-money">
+						<p class="bodies3">MONEY - LS MPS</p>
+						This Lok Sabha has 81.76% Crorepatis (what's the gender neutral term for this?) ranging from a net worth of 34k to 683 crores and a median of 3.25 crores. 
+					</div>
+				</div>
+			</div>
+
+			<div class="sections row">
 				<p class="titles">
 					1. The Monies
 				</p>
@@ -47,8 +113,32 @@
 				</div>
 				
 			</div>
-		</div>
-		
+
+
+			<div class="row" style=" margin-bottom: 100px">
+				<p class="titles" style="margin-top: 100px;">Questions / Hypotheses / Ideas for Next Week</p>
+				<p>
+				<ul>
+
+					<li class="bodies2">
+						Details about each LS MP upon hover, also make it searchable 
+					</li>
+					<li class="bodies2">
+						Education, Criminal Cases, Assets and Gender, across party lines. 
+					</li>
+					<li class="bodies2">
+						Investigate the lower number of women-winners by looking at the candidate pool
+					</li>
+					<li class="bodies2">
+						Correlate Criminal cases of MPs, Education, Assets and Gender to development markers like literacy rate, etc.
+					</li>
+					<li class="bodies2">
+						Obtain data for previous Lok Sabha elections and compare across the above parameters
+					</li>
+				</ul>
+				</p>
+			</div>
+		</div>		
 	</div>
 
 		
