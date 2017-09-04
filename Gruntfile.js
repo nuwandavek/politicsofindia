@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 			dist: {
 				files: [{
 					expand: true,
-					src: ['index.html','jsmain.js','cssmain.css', 'res/add.html','res/data.js'],
+					src: ['index.html','jsmain.js','cssmain.css', 'res/add.html','res/data.js','res/india.topojson','res/graph-scroll.js'],
 					dest: 'dist/'
 				}]
 			}
